@@ -5,7 +5,7 @@ $connectionOptions = array(
     "Uid"      => "Bisola_new",
     "PWD"      => "eiu947qwbjgf@#455",
     "TrustServerCertificate"=> 'true',
-    "Encrypt"=>'Yes',
+    "Encrypt"=>'Yes'
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);

@@ -58,8 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // Execute the SQL query
    $er = sqlsrv_query($conn, $rinu2, $params, $opts);
    $twin = sqlsrv_query($conn, $rinu2);
-   $row_count = sqlsrv_num_rows($er);
-   
+   $row_count = sqlsrv_num_rows($er);  
    // Check if there are rows in the result
    if ($row_count > 0) {
        // Loop through the rows
