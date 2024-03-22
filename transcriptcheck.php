@@ -52,7 +52,8 @@ if ($result === false) {
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="jquery.js"></script>
+ <!-- jQuery CDN (MaxCDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -184,12 +185,19 @@ if ($result === false) {
                 </div>
                 <!-- /Page Header -->
                 <hr>
+                <form id="pickDate" action="revert.php" method="POST">
+                  <label for="pickDate">Select Date:</label>
+                 <input type="date" id="pickDateInput" name="pickDate">
+                   <button type="submit">Rerun if Download fails</button>
+                  </form>
 
+          
 
                 <table id="example2" class="display" style="width:100%">
                     <button id="downloadResultsBtn" onclick="downloadZip()">Generate Result Download Link</button>
-                    <button id="resetAndRerunBtn">Click Rerun Download,If Failed</button>
-                    <div>
+
+
+             <div>
                         <?php
 
                         if (isset($_SESSION['downloadLink'])) {
